@@ -23,6 +23,11 @@ SERVER_IP=`hostname -I`
 # Installation
 # -------------------------------------------------------------------------------------------\
 
+if [ -x "$(command -v consul)" ]; then
+  echo 'Error: Consul already installed.' >&2
+  exit 0
+fi
+
 # Install packages
 apt update && apt -y install gnupg2 curl lsb-release
 
