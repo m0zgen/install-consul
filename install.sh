@@ -24,7 +24,7 @@ SERVER_IP=`hostname -I`
 # -------------------------------------------------------------------------------------------\
 
 # Install packages
-apt update && apt install gnupg2 curl lsb-release
+apt update && apt -y install gnupg2 curl lsb-release
 
 # Install consul's gpg key
 curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
@@ -33,8 +33,8 @@ curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
 echo "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main" > /etc/apt/sources.list.d/hashicorp.list
 
 # Update and install consul
-apt-get update
-apt-get install consul
+apt update
+apt -y install consul
 
 # Final Checking
 # -------------------------------------------------------------------------------------------\
