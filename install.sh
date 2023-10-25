@@ -24,7 +24,7 @@ SERVER_IP=`hostname -I`
 # -------------------------------------------------------------------------------------------\
 
 # Install packages
-apt-get update && apt-get install gnupg2 curl lsb-release
+apt update && apt install gnupg2 curl lsb-release
 
 # Install consul's gpg key
 curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
