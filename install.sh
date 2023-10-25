@@ -7,6 +7,19 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
+# Vars
+HOSTNAME=`hostname`
+SERVER_IP=`hostname -I`
+
+# Functions
+# create_systemd_unit() {
+
+# }
+
+# create_consul_config() {
+
+# }
+
 # Installation
 # -------------------------------------------------------------------------------------------\
 
